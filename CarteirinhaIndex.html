@@ -168,50 +168,49 @@
     }
   }
 
-  /*----------------   landscape ------------------------*/
-  /*
-@media screen and (orientation: landscape) and (max-width: 950px) {
-  .container {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+  /* ----------------   landscape ------------------------*/
 
-  .card {
-    width: 45%;
-	margin: 10px;
-	position: relative; 
-	top: auto; 
-	border-radius: 20px;
-  }
+  @media screen and (orientation: landscape) and (max-width: 950px) {
+    .container {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-  .qr-section {
-    width: 45%;
-    margin: 10px;
-    background-color: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    .card {
+      width: 45%;
+      margin: 10px;
+      position: relative;
+      top: auto;
+      border-radius: 20px;
+    }
 
-  .qr-section img {
-    width: 180px;
-    height: 180px;
-  }
+    .qr-section {
+      width: 45%;
+      margin: 10px;
+      background-color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-  .info {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
+    .qr-section img {
+      width: 180px;
+      height: 180px;
+    }
 
-  .dados p {
-    font-size: 13px;
+    .info {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    .dados p {
+      font-size: 13px;
+    }
   }
-}
- */
 </style>
 
 <body><input type="hidden" value="https://sec2.unip.br/NovaSecretaria/" id="UrlDefault">
@@ -247,9 +246,7 @@
       </div>
     </div>
     <div class="qr-section">
-      <img
-        src="QRCode.png"
-        alt="QR Code">
+      <img src="QRCode.png" alt="QR Code">
     </div>
   </div>
 
