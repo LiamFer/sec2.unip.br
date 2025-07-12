@@ -1,429 +1,259 @@
 <html>
-  <head>
-    <style type="text/css" id="operaUserStyle"></style>
-    <style type="text/css"></style>
-  </head>
-  <body cz-shortcut-listen="true">
-    <input
-      type="hidden"
-      value="https://sec2.unip.br/NovaSecretaria/"
-      id="UrlDefault"
-    />
 
-    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />​
-    <style>
-      /**{
-    margin: 00px;
-    padding: 00px;
-    box-sizing: content-box;
-}
+<head></head>
+<style>
+  /* RESET BÁSICO */
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
 
-.container {
+  /* CONTAINER PRINCIPAL */
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    width: 100%;
+    gap: 40px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* CARTÃO */
+  .card {
+
+    background: linear-gradient(to bottom, #0b1e6b, #5672c1);
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* LOGO */
+  .logo img {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 200px;
+    width: 80%;
+  }
+
+  /* FOTO E DADOS */
+  .info {
+    /* display: flex;
+    flex-direction:row ;
+    align-items: center; */
+
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #e6ebe0;
-    flex-direction: row;
-    flex-flow: wrap;
-
-}
-
-.font{
-    height: 375px;
-    width: 250px;
-    position: relative;
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 10px;
-}
-
-.top {
-    height: 30%;
-    width: 100%;
-    background-color: #3e42cf;
-   
-    position: relative;
-    z-index: 5;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-
-
-.top .logo {
-     padding-top: 15px;
-     text-align: center;
- }
-
-.logo {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
-}
-
-.logo .unip {
-    color: yellow;
-    font-weight: bold;
- }
-
-.logo .paulista {
-     color: white;
-     background-color: red;
-     padding-right: 1px;
- }
-
-
-
-.bottom{
-    height: 70%;
-    width: 100%;
-    background-color: white;
-    position: absolute;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-.top img{
-    height: 100px;
-    width: 100px;
-    background-color: #e6ebe0;
-    border-radius: 10px;
-    position: absolute;
-    top:60px;
-    left: 75px;
-    margin-bottom: -5px;
-}
-.bottom p{
-    position: relative;
-    top: 60px;
-    text-align: center;
-    text-transform: capitalize;
-    
-    font-size: 20px;*/
-      /*  text-emphasis: spacing;
-*/ /*}
-.bottom .ra{
-    font-size:14px;
-    
-    font-weight: normal;
-}
-.bottom .nome{
-    font-size: 15px;
-    font-weight: bold;
-    margin-top: -2px;
-    
-}
-
-.bottom .campus {
-    font-size: 15px;
-}
-
-.bottom .curso {
-    font-size: 15px;
-}
-
-.bottom .rg  {
-    font-size: 15px;
-}
-
-
-.bottom .nasci {
-    font-size: 15px;
-}
-
-
-.bottom .ingresso {
-    font-size: 15px;
-}
-
-.barcode img {
-    height: 62px;
-    width: 65px;
-    text-align: center;
-    margin-bottom: 1px;
-
-  
-}
-.barcode {
-    text-align: center;
-    position: relative;
-    top: 70px;
-   
-}
-
-.back {
-    height: 375px;
-    width: 250px;
-    border-radius: 10px;
-    background-color: #3e42cf;
-}
-.qr img{
-    height: 80px;
-    width: 100%;
-    margin: 20px;
-    background-color: white;
-}
-.Details {
-    color: white;
-    text-align: center;
     padding: 10px;
-    font-size: 25px;
-}
+    margin-top: 15px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    /* compatibilidade Safari */
+  }
 
+  .foto img {
+    border-radius: 10px;
+    width: 100px;
+    margin-bottom: 20px;
+    padding-right: 0.5rem;
+  }
 
-.details-info{
-    color: white;
-    text-align: left;
-    padding: 5px;
-    line-height: 20px;
-    font-size: 16px;
-    text-align: center;
-    margin-top: 20px;
-    line-height: 22px;
-}
+  .dados p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
 
-.logo {
-    height: 40px;
-    width: 150px;
-    padding: 40px;
-}
+  /* QR CODE */
+  .qr-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
 
-.logo img{
-    height: 100%;
-    width: 100%;
-    color: white ;
+  .qr-section img {
+    width: 200px;
+    height: 200px;
+  }
 
-}
-.padding{
-    padding-right: 20px;
-}
-
-@media screen and (max-width:400px)
-{
-    .container{
-        height: 130vh;
-    }
-    .container .front{
-        margin-top: 50px;
-    }
-}
-@media screen and (max-width:600px)
-{
-    .container{
-        height: 130vh;
-    }
-    .container .front{
-        margin-top: 50px;
+  /* RESPONSIVO: TELAS MENORES */
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      gap: 20px;
     }
 
-}*/
+    .qr-section img {
+      width: 150px;
+      height: 150px;
+    }
+  }
 
-      /*TRECHO ACIMA ORIGINAL*/
-      /*====================================================**/
+  /* TELAS BEM PEQUENAS */
+  @media screen and (max-width: 480px) {
+    .card {
+      width: 90%;
+    }
 
-      /*TRECHO ABAIXO NOVO PROJETO INICIO 16/11/22 */
+    .qr-section img {
+      width: 120px;
+      height: 120px;
+    }
 
-      /*mobile*/
-      @media (orientation: portrait) {
-        .row {
-          /* height: 35%; */
-          width: 176%;
-          background-color: white;
-          /* height: 40%; */
-          border-style: groove;
-          transform: rotate(90deg);
-          margin-top: 34%;
-          margin-left: -36%;
-          margin-top: 50%;
-        }
+    .dados p {
+      font-size: 13px;
+    }
+  }
 
-        header {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 1rem;
-          margin-top: 1rem;
-        }
+  /*-------------------------------------------------------------------------*/
 
-        .logo {
-          width: 121px;
-          height: 149px;
-          /* background-color: whitesmoke;*/
-          margin-left: 1rem;
-          font-family: sans-serif, Verdana;
-        }
 
-        .imagem {
-          width: 455px;
-        }
+  @media screen and (orientation: portrait) {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 20px;
+      width: 100%;
+    }
 
-        .curso {
-          margin-top: 15px;
-          margin-right: 1rem;
-          font-family: sans-serif, Verdana;
-          font-weight: bolder;
-          /*altera��o css 18/11/22*/
-          font-size: 4em;
-        }
+    .card {
+      position: fixed;
+      top: 0;
+      align-self: center;
+      border-radius: 0 0 15px 15px;
+      z-index: 10;
+    }
 
-        .dados {
-          width: 100%;
-          display: flex;
-          font-family: sans-serif, Verdana;
-          justify-content: space-between;
-          background-image: linear-gradient(
-            rgba(147, 190, 240, 0.986),
-            rgb(202, 237, 238)
-          );
-          padding-bottom: 10px;
-          /*altera��o css 18/11/22*/
-          font-size: 4em;
-        }
+    .qr-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 230px;
+      /* Ajusta conforme altura do card */
+      background-color: transparent;
+      /* Remove fundo branco */
+      box-shadow: none;
+      /* Remove sombra, se tiver */
+      border-radius: 0;
+      /* Remove borda arredondada */
 
-        .barcode {
-          margin-top: 65px;
-          margin-right: 3rem;
-        }
+    }
 
-        .barcode img {
-          /*height: 120px;
-            width: 100px;*/
-          height: 257px;
-          width: 264px;
-          text-align: center;
-          margin-bottom: 1px;
-        }
+    .qr-section img {
+      width: 250px;
+      /* Ou o tamanho desejado */
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      /* Um leve toque, opcional */
+      margin-right: 25px;
+    }
 
-        ul {
-          /*font-weight: bold;*/
-          list-style-type: none;
-          padding-left: 10px;
-          margin-top: 30px;
-        }
+    .info {
+      flex-direction: row;
+      justify-content: flex-start;
+      margin: 15px auto 0 auto;
+      width: 90%;
+    }
+  }
 
-        ul,
-        li {
-          padding-bottom: 9px;
-        }
+  /*----------------   landscape ------------------------*/
+  /*
+@media screen and (orientation: landscape) and (max-width: 950px) {
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-        .rodape {
-          font-family: sans-serif, Verdana;
-          text-align: right;
-          margin-top: 2rem;
-          margin-right: 1rem;
-          font-weight: bolder;
-          /*altera��o css 18/11/22*/
-          font-size: 4em;
-        }
-      }
+  .card {
+    width: 45%;
+	margin: 10px;
+	position: relative; 
+	top: auto; 
+	border-radius: 20px;
+  }
 
-      /*desktop*/
-      @media (orientation: landscape) {
-        .row {
-          transform: rotate(0deg);
-          background-color: white;
-          /* height: 40%; */
-          border-style: groove;
-          width: 700px;
-          /*18-11-2022*/
-        }
+  .qr-section {
+    width: 45%;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-        .imagem {
-          width: 200px;
-        }
+  .qr-section img {
+    width: 180px;
+    height: 180px;
+  }
 
-        header {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 1rem;
-          margin-top: 1rem;
-        }
+  .info {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 
-        .logo {
-          width: 121px;
+  .dados p {
+    font-size: 13px;
+  }
+}
+ */
+</style>
 
-          margin-left: 1rem;
-          font-family: sans-serif, Verdana;
-        }
+<body><input type="hidden" value="https://sec2.unip.br/NovaSecretaria/" id="UrlDefault">
 
-        .curso {
-          margin-top: 15px;
-          margin-right: 1rem;
-          font-family: sans-serif, Verdana;
-          font-weight: bolder;
-        }
 
-        .dados {
-          display: flex;
-          font-family: sans-serif, Verdana;
-          justify-content: space-between;
-          background-image: linear-gradient(
-            rgba(147, 190, 240, 0.986),
-            rgb(202, 237, 238)
-          );
-          padding-bottom: 10px;
-        }
 
-        .barcode {
-          margin-top: 1rem;
-          margin-right: 1rem;
-        }
 
-        .barcode img {
-          height: 120px;
-          width: 130px;
-          text-align: center;
-          margin-bottom: 1px;
-        }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">â€‹
+  <link href="/NovaSecretaria/Content/css/idCard.css" rel="stylesheet">
 
-        ul {
-          /*font-weight: bold;*/
-          list-style-type: none;
-          padding-left: 10px;
-          margin-top: 30px;
-        }
 
-        ul,
-        li {
-          padding-bottom: 9px;
-        }
 
-        .rodape {
-          font-family: sans-serif, Verdana;
-          text-align: right;
-          margin-top: 2rem;
-          margin-right: 1rem;
-          font-weight: bolder;
-        }
-
-        /*---------------------------------------22-11 ARRUMAR FONTE DADOS-------------------------------------------------------*/
-      }
-    </style>
-
-    <div class="row">
-      <header>
-        <div class="logo">
+  <div class="container">
+    <div class="card">
+      <div class="logo">
+        <img src="https://sec2.unip.br/NovaSecretaria/Content/img/LogoAmareloBrancoNew.png" alt="Logo da Faculdade">
+      </div>
+      <div class="info">
+        <div class="foto">
           <img
-            class="imagem"
-            src="https://sec2.unip.br/NovaSecretaria/Content/img/UNIP.png"
-          />
+            src="data:image/jpeg;base64,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"
+            alt="Foto 3x4">
         </div>
-        <div class="curso">SUP TEC EM ANALISE/DESENV SISTEMAS</div>
-      </header>
-      <div class="dados">
-        <ul>
-          <li><b>NOME: </b> WILLIAM DE SOUSA FERNANDES</li>
-          <li><b>MATRICULA:</b> G7530B5</li>
-          <li><b>IDENTIDADE:</b> 506294389</li>
-          <li><b>DATA NASCIMENTO:</b> 19/10/04</li>
-          <li><b>CAMPUS:</b> CAMPINAS-SWIFT</li>
-        </ul>
-        <div class="barcode">
-          <img
-            style="border: 0"
-            src="QRCode.png"
-          />
+        <div class="dados">
+          <p><strong>Nome:</strong> WILLIAM DE SOUSA FERNANDES</p>
+          <p><strong>Matrícula:</strong> G7530B5</p>
+          <p><strong>RG:</strong> 63081106 4</p>
+          <p><strong>Campus:</strong> 506294389</p>
+          <p><strong>Curso:</strong> SUP TEC EM ANALISE/DESENV SISTEMAS</p>
+          <p><strong>Validade:</strong> JAN/26</p>
         </div>
       </div>
-      <div class="rodape">VALIDADE: JAN/26</div>
     </div>
-  </body>
+    <div class="qr-section">
+      <img
+        src="QRCode.png"
+        alt="QR Code">
+    </div>
+  </div>
+
+
+</body>
+
 </html>
